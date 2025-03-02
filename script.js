@@ -23,7 +23,7 @@ async function fetchData() {
         tableContainer.innerHTML = `<div class="error">${error.message}</div>`;
     }
 }
-
+//downloads the table
 function createTable(data) {
     tableContainer.innerHTML = '';
 
@@ -107,7 +107,7 @@ function createTable(data) {
         });
     });
 }
-
+//creates a table
 function filterDataByTitleAndDirector(searchTerm) {
     const term = searchTerm.toLowerCase().trim();
     currentData = originalData.filter(item => {
@@ -117,13 +117,14 @@ function filterDataByTitleAndDirector(searchTerm) {
     });
     createTable(currentData);
 }
-
+//search by name and director
 if (searchInput) {
     searchInput.addEventListener('input', (event) => {
         const searchTerm = event.target.value;
         filterDataByTitleAndDirector(searchTerm);
     });
 }
+//checks that the filter is working
 
 function createTopDirectorsChart() {
     d3.select("#directors-chart").html("");
@@ -209,7 +210,7 @@ function createTopDirectorsChart() {
     }
     
     
-}
+}//creates a chart with the first most popular directors in the list
 
 function createTopFilmsByIdChart() {
     d3.select("#films-id-chart").html("");
@@ -303,17 +304,7 @@ function createTopFilmsByIdChart() {
         tooltip.style("opacity", 0);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
+//creates a graph with the first 10 movies
 document.addEventListener('DOMContentLoaded', () => {
     fetchData();
 });
