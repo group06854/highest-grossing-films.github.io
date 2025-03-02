@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Highest-Grossing Films</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#table-container">List of Films</a></li>
+            <li><a href="#directors-chart">Movie Statistics</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <h1>Highest-Grossing Films</h1>
+        <h5>This site provides interesting statistics on the highest-grossing films in human history.</h5>
+    </div>
+
+    <div class="charts-container">
+        <div id="directors-chart"></div> 
+        <div id="films-id-chart"></div>     
+    </div>
+
+    <div class="filter">
+        <input type="text" id="search-input" placeholder="Search by title/director">
+    </div>
+
+    <div id="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th data-sortable="true" data-column="id">ID</th>
+                    <th data-sortable="true" data-column="title">Title</th>
+                    <th data-sortable="true" data-column="release_year">Year</th>
+                    <th data-sortable="true" data-column="director">Director</th>
+                    <th data-sortable="true" data-column="box_office">Box Office</th>
+                    <th data-sortable="true" data-column="country">Country</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v2.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
