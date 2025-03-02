@@ -7,27 +7,28 @@
     <title>Highest-Grossing Films</title>
 </head>
 <body>
+    <!--navigation swction-->
     <nav>
         <ul>
             <li><a href="#table-container">List of Films</a></li>
             <li><a href="#directors-chart">Movie Statistics</a></li>
         </ul>
     </nav>
-
+<!--Title section-->
     <div>
         <h1>Highest-Grossing Films</h1>
         <h5>This site provides interesting statistics on the highest-grossing films in human history.</h5>
     </div>
-
+    <!-- Charts section -->
     <div class="charts-container">
         <div id="directors-chart"></div> 
         <div id="films-id-chart"></div>     
     </div>
-
+<!--filter section-->
     <div class="filter">
         <input type="text" id="search-input" placeholder="Search by title/director">
     </div>
-
+<!--table with data-->
     <div id="table-container">
         <table>
             <thead>
@@ -43,7 +44,7 @@
             <tbody id="table-body"></tbody>
         </table>
     </div>
-
+<!--imports-->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v2.min.js"></script>
     <script src="script.js"></script>
